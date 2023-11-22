@@ -2,8 +2,8 @@ import { useState } from "react";
 import reactLogo from "../assets/react.svg";
 import HelloWorld from "../components/HelloWorld";
 import Variables from "../components/Variables";
-import { useUser } from "../providers/UserProvider";
 import viteLogo from "/vite.svg";
+import useUser from "../hooks/useUser";
 
 export default function Home() {
     const [count, setCount] = useState(0);
