@@ -1,14 +1,19 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
+import Profile from "./pages/Profile";
+import UserProvider from "./providers/UserProvider";
 
 function App() {
     return (
-        <main>
-            <Routes>
-                <Route path="/" element={<Home />} />
-            </Routes>
-        </main>
+        <UserProvider>
+            <main>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/profile" element={<Profile />} />
+                </Routes>
+            </main>
+        </UserProvider>
     );
 }
 
